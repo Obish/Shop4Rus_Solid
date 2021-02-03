@@ -9,6 +9,7 @@ namespace Shop4Rus.Interface
     public interface IGetDiscount
     {
         ReturnMessage<List<Discounts_VM>> GetAllDiscounts();
+        
         ReturnMessage<Discounts_VM> GetDiscountByType(int Type);
     }
 }
