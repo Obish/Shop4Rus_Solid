@@ -18,9 +18,9 @@ namespace Shop4Rus.Controllers
     {
         private readonly IMapper mapper;
         private readonly ILogger logger;
-        private readonly IDiscountCore discountCore;
+        private readonly ICreateNewDiscount discountCore;
         private readonly IGetDiscount getDiscount;
-        public DiscountController (IMapper Mapper, ILogger Logger, IDiscountCore discountCore,IGetDiscount getDiscount)
+        public DiscountController (IMapper Mapper, ILogger Logger, ICreateNewDiscount discountCore,IGetDiscount getDiscount)
         {
             mapper = Mapper;
             logger = Logger;

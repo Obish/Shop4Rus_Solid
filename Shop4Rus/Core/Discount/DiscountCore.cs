@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shop4Rus.Core.Discount
 {
-    public class DiscountCore : IDiscountCore
+    public class DiscountCore : ICreateNewDiscount
     {
         private readonly ILogger logger;
         private readonly IMapper mapper;

@@ -15,6 +15,7 @@ using Shop4Rus.Core.Customer;
 using Shop4Rus.Core.Discount;
 using Shop4Rus.Core.Invoice;
 using Shop4Rus.Interface;
+using Shop4Rus.Interface.Discount;
 
 namespace Shop4Rus
 {
@@ -41,10 +42,15 @@ namespace Shop4Rus
             // x.GetRequiredService<ILogger>())));
             services.AddScoped<ICreateCustomer, CreateCustomer>();
             services.AddScoped<IGetCustomer, GetCustomer>();
-            services.AddScoped<IDiscountSystem, DiscountSystem>();
+            services.AddScoped<ICalculateInvoice, DiscountSystem>();
             services.AddScoped<IDiscountPoliciesMethods, CalculateDiscountForEachType>();
-            services.AddScoped<IDiscountCore, DiscountCore>();
+            services.AddScoped<ICreateNewDiscount, DiscountCore>();
             services.AddScoped<IGetDiscount, GetDiscount>();
+            services.AddScoped<ICalculateDiscount, BaseDiscount>();
+            services.AddScoped<ICalculateDiscount, CustomeTypeDiscount>();
+            services.AddScoped<ICalculateDiscount, CustomerLoyaltyDiscount>();
+            services.AddScoped<IProcessDiscountTypes, CalculateTotalDiscount>();
+
 
         }
 

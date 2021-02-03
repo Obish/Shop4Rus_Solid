@@ -24,14 +24,14 @@ namespace Shop4Rus.Controllers
         public readonly IMapper mapper;
         public readonly ILogger logger;
         public readonly IGetCustomer getCustomer;
-        public readonly IDiscountSystem discountSystem;
+        public readonly ICalculateInvoice discountSystem;
 
-        public InvoiceController( IMapper Mapper, ILogger Logger, IGetCustomer getCustomer, IDiscountSystem discountSystem)
+        public InvoiceController( IMapper Mapper, ILogger Logger, IGetCustomer getCustomer, ICalculateInvoice discountSystem)
         {
           //  discountpolicy = discountPolicy;
             mapper = Mapper;
             logger = Logger;
-            getCustomer = getCustomer;
+            this.getCustomer = getCustomer;
             this.discountSystem = discountSystem;
         }
 

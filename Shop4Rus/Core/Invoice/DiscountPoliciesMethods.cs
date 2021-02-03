@@ -11,18 +11,18 @@ namespace Shop4Rus.Core.Invoice
     public class CalculateDiscountForEachType : IDiscountPoliciesMethods
     {
 
-        public decimal CustomeTypeDiscount(TotalBill order, ReturnMessage<Discounts_VM> GetDiscount)
+        public decimal CustomeTypeDiscount(TotalBill order)
         {
 
 
             if (order.UserType.ToString() == "AffliateCustomer")
             {
-                return Convert.ToDecimal(GetDiscount.Body.DiscountPercentage) * order.orders.Where(p => p.ProductCategory != 1).Sum(p => p.Price); ;
+                return Convert.ToDecimal(order.DiscountPercentage) * order.orders.Where(p => p.ProductCategory != 1).Sum(p => p.Price); ;
             }
 
             if (order.UserType.ToString() == "Staff")
             {
-                return Convert.ToDecimal(GetDiscount.Body.DiscountPercentage) * order.orders.Where(p => p.ProductCategory != 1).Sum(p => p.Price); ;
+                return Convert.ToDecimal(order.DiscountPercentage) * order.orders.Where(p => p.ProductCategory != 1).Sum(p => p.Price); ;
             }
             else
                 return 0m;

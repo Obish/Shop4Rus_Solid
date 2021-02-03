@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Core\Invoice\DiscountPoliciesMethods.cs" />
+    <Compile Remove="Interface\IDiscountPoliciesMethods.cs" />
     <Compile Remove="Utilities\APIClass.cs" />
   </ItemGroup>
 

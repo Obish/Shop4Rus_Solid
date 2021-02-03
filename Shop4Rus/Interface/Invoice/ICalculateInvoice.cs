@@ -2,7 +2,7 @@
 
 namespace Shop4Rus.Interface
 {
-    public interface IDiscountSystem
+    public interface ICalculateInvoice
     {
         InvoiceAmount ComputePrice(TotalBill order);
     }

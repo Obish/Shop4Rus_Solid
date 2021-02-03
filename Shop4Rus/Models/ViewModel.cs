@@ -55,6 +55,8 @@ namespace Shop4Rus.Models
         public DateTime DateCreated { get; set; }
 
         public List<Orders_Details> orders { get; set; } 
+
+        public string DiscountPercentage { get; set; }
     }
 
     public class Orders_Details

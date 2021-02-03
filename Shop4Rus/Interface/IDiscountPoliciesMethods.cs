@@ -6,6 +6,6 @@ namespace Shop4Rus.Interface
     {
         decimal BaseDiscount(TotalBill order);
         decimal CustomerLoyaltyDiscount(TotalBill order);
-        decimal CustomeTypeDiscount(TotalBill order, ReturnMessage<Discounts_VM> GetDiscount);
+        decimal CustomeTypeDiscount(TotalBill order);
     }
 }
