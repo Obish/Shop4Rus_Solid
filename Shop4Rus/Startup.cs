@@ -43,7 +43,7 @@ namespace Shop4Rus
             services.AddScoped<ICreateCustomer, CreateCustomer>();
             services.AddScoped<IGetCustomer, GetCustomer>();
             services.AddScoped<ICalculateInvoice, DiscountSystem>();
-            services.AddScoped<IDiscountPoliciesMethods, CalculateDiscountForEachType>();
+          //  services.AddScoped<IDiscountPoliciesMethods, CalculateDiscountForEachType>();
             services.AddScoped<ICreateNewDiscount, DiscountCore>();
             services.AddScoped<IGetDiscount, GetDiscount>();
             services.AddScoped<ICalculateDiscount, BaseDiscount>();
